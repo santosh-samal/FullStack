@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            #errorMessage
+            {
+                color: red;
+            }
+            #lblSuccessMessage
+            {
+                color: green;
+            }
+            .error
+            {
+                color: red;
+            }
+        </style>
+        <script>
+            function ShowMessage()
+            {
+                
+                var uname = document.getElementById("txtUserName").value;
+                if(uname == "")
+                {
+                    document.getElementById("unameError").innerHTML = "Please enter username";
+                    return false;
+                }
+
+                var pwd = document.getElementById("txtpassword").value;
+                if(pwd == "")
+                {
+                   
+                    document.getElementById("pwdError").innerHTML = "Please enter password";
+                    return false;
+                }
+               
+                document.getElementById("lblSuccessMessage").innerHTML = "Login successful.";
+                document.getElementById("unameError").innerHTML = "";
+                document.getElementById("pwdError").innerHTML = "";
+
+            }
+        </script>
+    </head>
+    <body>
+        <p id="errorMessage">&nbsp;</p>
+        Username :<input type="text" id="txtUserName" /> <p id="unameError" class="error">
+
+        </p> <br/>
+        Password :<input type="password" id="txtpassword" /> <p id="pwdError" class="error"></p><br/>
+        <p id="lblSuccessMessage">&nbsp;</p>
+        <input type="button" id="btnSubmit" value="Login" onclick="ShowMessage()" />
+    </body>
+</html>
