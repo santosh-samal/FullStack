@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            
+            (function(){
+                alert("Selfhosted");
+                
+            })();
+
+            const x = function(y,z){alert(y+z)};
+
+            function ShowLoadingMesasage()
+            {
+                document.getElementById("txtMesage").value = "Hello World !";
+                alert("Body onload called.");
+            }
+            function SetHelloMesage()
+            {
+                let name = document.getElementById("txtMesage").value;
+                document.getElementById("txtalert").value = "Hello "+name;
+                funcWithParam(5,10);
+                x(50,50);
+            }
+            function funcWithParam(a, b=1)
+            {
+                alert(a/b);
+                alert(b);
+            }
+            
+        </script>
+    </head>
+    <body onload="ShowLoadingMesasage();">
+        <input type="text" id="txtMesage" onblur="SetHelloMesage();" />
+        <input type="text" id="txtalert" />
+        <input type="button" value="Show Mesage" />
+        <input type="button" value="Add" onclick="funcWithParam(3);" />
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+            <script>
+
+                /*Multi line comment
+                multiline commebnt */
+                var v = 2;    
+                 v = "Medsasge";            
+                const pi=3.14;//PI value is constant should not change.
+                function ShowMessage()
+                {
+                    alert("Current v type "+ v);
+                    //console.log("Show mesage");
+                    //let v = 4; //comment line
+                    //pi = 4.56;
+                    //alert(pi);
+                    if(true)
+                    {
+                        //var v = 10;
+                        alert("inner v - "+v);
+                    }
+
+                    alert("Outer v-"+v);
+                }
+
+                function ShowValue()
+                {
+                    alert(v);
+                }
+
+                console.log(v);
+            </script>
+    </head>
+    <body>
+        <input type="button" id="btnLogin" value="Login" onclick="ShowMessage();" />
+        <input type="button" id="btnShow" value="Show" onclick="ShowValue();" />
+    </body>
+</html>
