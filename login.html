@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script>
+            function ShowMessage()
+            {
+                
+                 uname = document.getElementById("txtUserName").value;
+                if(uname == "")
+                {
+                    document.getElementById("unameError").innerHTML = "Please enter Email";
+                    return false;
+                }
+
+                 pwd = document.getElementById("txtpassword").value;
+                if(pwd == "")
+                {
+                   
+                    document.getElementById("pwdError").innerHTML = "Please enter password";
+                    return false;
+                }
+               
+                document.getElementById("lblSuccessMessage").innerHTML = "signin successful.";
+                document.getElementById("unameError").innerHTML = "";
+                document.getElementById("pwdError").innerHTML = "";
+
+            }
+        </script>
+        </head>
+        <body  style= "background-color: whitesmoke;">
+            <div class="container-fluid">
+              <table margin="2"  style="background-color: grey; color:black; height: 300px ;width: 300px; align-items:  center; ">  
+                    <tr >
+                        <th><b>Login</b></th>
+                    </tr>
+                      <tr style="text-align: center;">
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                              </svg> <input type="text"  placeholder="Email" id="txtUserName"><p id="unameError" class="error">
+                            </p> <br/>
+                            </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
+                                  </svg><input type="password"  placeholder="password" id="txtpassword"><p id="pwdError" class="error" ></p><br/>
+                                <p id="lblSuccessMessage">&nbsp;</p>
+                                </td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>
+                                    <input type="button" value="Login" onclick="ShowMessage()" >
+                                    <input type="button" value="reset">
+                                    </td>
+                                </tr>
+                    </table>  
+            </div>
+        </body>
+    </html>
